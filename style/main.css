@@ -1,0 +1,110 @@
+ * {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(/img/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(6, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(7, 80px);
+}
+
+.op{
+  cursor: pointer;
+  font-size: 1.20rem;
+  border: 1px solid rgb(184, 184, 184);
+  color: rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(245, 229, 243);
+
+}
+
+.op:hover{
+
+  background-color: rgb(252, 245, 245);
+
+}
+
+.num{
+
+  cursor: pointer;
+  font-size: 1.20rem;
+  border: 1px solid rgb(226, 203, 236);
+  color: rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.num:hover{
+
+  background-color: rgb(232, 222, 222);
+
+}
+
+.span-two {
+
+  grid-column: span 2;
+  cursor: pointer;
+  font-size: 1.20rem;
+  border: 1px solid rgb(196, 196, 196);
+  color: rgb(0, 0, 0, 0.589);
+  outline: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.span-two:hover {
+  background-color: rgb(233, 233, 233);
+
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(198, 190, 190);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 1.3rem;
+}
+
+.output .current-operand {
+  color: white;
+  background-color: rgb(198, 190, 190);
+  border: none;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: right;
+
+}
+
+button {
+  border-radius: 1.3rem;
+}
+
+.del {
+  background-color: rgb(237, 153, 153);
+}
